@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="DidactischeLeermiddelen.Models.domain.Material">
+    <Position X="7" Y="5" Width="3" />
+    <AssociationLine Name="Curriculars" Type="DidactischeLeermiddelen.Models.domain.Curricular">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="2.486" Y="0.123" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Company" Type="DidactischeLeermiddelen.Models.domain.Company">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.171" Y="-0.438" Height="0.182" Width="0.824" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Reservations" Type="DidactischeLeermiddelen.Models.domain.ReservedMaterial">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.797" Y="1.847" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAQAwAAAEEEYARKyAAAAAAAAAAIAABAAAAIA=</HashCode>
+      <FileName>Models\domain\Material.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Company" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="TargetAudiences" />
+      <Property Name="Curriculars" />
+      <Property Name="Reservations" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DidactischeLeermiddelen.Models.domain.Curricular">
+    <Position X="1.25" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACgAAAAAAAAA=</HashCode>
+      <FileName>Models\domain\Curricular.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DidactischeLeermiddelen.Models.domain.Company">
+    <Position X="4" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAACKAgAAABAAAAAQAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Models\domain\Company.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DidactischeLeermiddelen.Models.domain.TargetAudience">
+    <Position X="0.75" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAAAAgAAAA=</HashCode>
+      <FileName>Models\domain\TargetAudience.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DidactischeLeermiddelen.Models.DAL.CompanyRepository" BaseTypeListCollapsed="true">
+    <Position X="8" Y="11.5" Width="3.5" />
+    <AssociationLine Name="companies" Type="DidactischeLeermiddelen.Models.domain.Company" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.75" Y="11.5" />
+        <Point X="10.75" Y="10.574" />
+        <Point X="5.125" Y="10.574" />
+        <Point X="5.125" Y="9.651" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-3.912" Y="0.647" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAgAAAAQACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DAL\CompanyRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="companies" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DidactischeLeermiddelen.Models.DAL.CurricularRepository" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="11.5" Width="2.75" />
+    <AssociationLine Name="curriculars" Type="DidactischeLeermiddelen.Models.domain.Curricular" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.625" Y="11.5" />
+        <Point X="6.625" Y="11.125" />
+        <Point X="2.188" Y="11.125" />
+        <Point X="2.188" Y="10.132" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-2.29" Y="0.635" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAgAAAAQAAAAAAAAgAAAAAAAAAACAAA=</HashCode>
+      <FileName>Models\DAL\CurricularRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="curriculars" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DidactischeLeermiddelen.Models.DAL.MaterialRepository" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="7.25" Width="5" />
+    <TypeIdentifier>
+      <HashCode>gAICAEAAAAAAAAgAAAAQAAAAAAEAAAAAAABAAABCBAA=</HashCode>
+      <FileName>Models\DAL\MaterialRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="materials" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.252" Collapsed="true" />
+  </Class>
+  <Class Name="DidactischeLeermiddelen.Models.DAL.TargetAudienceRepository" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="11.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAiAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DAL\TargetAudienceRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="targetAudiences" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DidactischeLeermiddelen.Models.domain.User">
+    <Position X="9.25" Y="0.5" Width="3.75" />
+    <AssociationLine Name="Wishlist" Type="DidactischeLeermiddelen.Models.domain.Material">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.937" Y="0.417" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Reservations" Type="DidactischeLeermiddelen.Models.domain.ReservedMaterial">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.238" Y="0.073" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AKAAgEAAACAAAIAIEAAAAAgAAAAAAAAAAQAAAACAAAg=</HashCode>
+      <FileName>Models\domain\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Wishlist" />
+      <Property Name="Reservations" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DidactischeLeermiddelen.Models.domain.Lector">
+    <Position X="13.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\domain\Lector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DidactischeLeermiddelen.Models.domain.Student">
+    <Position X="13.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Models\domain\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DidactischeLeermiddelen.Models.DAL.UserRepository">
+    <Position X="12.75" Y="4.25" Width="2.25" />
+    <AssociationLine Name="users" Type="DidactischeLeermiddelen.Models.domain.User">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.937" Y="0.303" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>oAICAAAAAAAAAAgAAAAQAAAAAAAFAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DAL\UserRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="users" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DidactischeLeermiddelen.Models.domain.Reservation">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\domain\Reservation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DidactischeLeermiddelen.Models.domain.ReservedMaterial">
+    <Position X="4.75" Y="1" Width="2.75" />
+    <AssociationLine Name="Material" Type="DidactischeLeermiddelen.Models.domain.Material">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.004" Y="0.659" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QEABAAAAAAAAAAAAAAIAAAAwAAgEAAQAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\domain\ReservedMaterial.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+      <Property Name="Material" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DidactischeLeermiddelen.Models.domain.Blocking">
+    <Position X="1.5" Y="1" Width="2.75" />
+    <InheritanceLine Type="DidactischeLeermiddelen.Models.domain.ReservedMaterial" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.686" />
+        <Point X="4.5" Y="1.686" />
+        <Point X="4.5" Y="1.632" />
+        <Point X="4.25" Y="1.632" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\domain\Blocking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

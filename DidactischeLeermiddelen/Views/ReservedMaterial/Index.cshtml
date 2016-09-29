@@ -1,0 +1,59 @@
+﻿@model IEnumerable<DidactischeLeermiddelen.Models.domain.ReservedMaterial>
+
+@{
+    ViewBag.Title = "Reservaties";
+}
+@{
+    if (!User.Identity.IsAuthenticated)
+    {
+        if (Request.Url != null)
+        {
+            Response.Redirect("~/Account/Login?returnUrl="
+                              + Request.Url.LocalPath);
+        }
+    }
+}
+
+<h2>Reservaties</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountReserved)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                Verwijder
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                   @Html.ActionLink(item.name, "Detail", "Material", new { materialid = item.Material.MaterialId }, null)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AmountReserved)
+                </td>
+                <td>
+                    @Html.ValueFor(modelItem => item.StartDate, "{0:dd/MM/yyyy}")
+                </td>
+                <td>
+                    @using (Html.BeginForm("RemoveFromReservation", "ReservedMaterial", new { reservedmaterialId = item.ReservedMaterialId }, FormMethod.Post))
+                    {
+                        <button type="submit" class="btn btn-danger" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </button>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,131 @@
+﻿@model DidactischeLeermiddelen.Models.domain.Material
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>@Model.Name</h2>
+
+@if (Model.ImagePath != null && Model.ImagePath != "")
+{
+    <img src="@Url.Content(Model.ImagePath)" alt="@Model.Name" class="materialImage" />
+}
+@*style="width:304px;height:228px;"*@
+<table class="table">
+    <tbody>
+    @*<tr>
+        <td>
+            <b>@Html.DisplayNameFor(m => m.Name)</b>
+        </td>
+        <td>
+            @Model.Name
+        </td>
+    </tr>*@
+        <tr>
+            <td>
+                <b>@Html.DisplayNameFor(m => m.Description)</b>
+</td>
+            <td>
+                @Model.Description
+            </td>
+        </tr>
+    <tr>
+        <td>
+            <b>@Html.DisplayNameFor(m => m.TotalAmount)</b>
+        </td>
+        <td>
+            @Model.TotalAmount
+        </td>
+    </tr>
+        <tr>
+            <td>
+                <b> @Html.DisplayNameFor(m => m.Price)</b>
+</td>
+            <td>
+                &euro; @Model.Price
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b> @Html.DisplayNameFor(m => m.ItemNumber) </b>
+</td>
+            <td>
+                @Model.ItemNumber
+            </td>
+        </tr>
+    <tr>
+        <td>
+            <b>@Html.DisplayNameFor(m => m.Company)</b>
+</td>
+        <td>
+            @Model.Company.Name
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b> @Html.DisplayNameFor(m => m.Curriculars)</b>
+</td>
+        <td>
+            @foreach (var curr in Model.Curriculars)
+            {
+                @curr.Name <br />
+
+            }
+        </td>
+    </tr>
+        <tr>
+            <td>
+                <b> @Html.DisplayNameFor(m => m.TargetAudiences)</b>
+</td>
+            <td>
+                @foreach (var targ in Model.TargetAudiences)
+                {
+                    @targ.Name <br />
+                }
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Reservaties</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservations.ElementAt(0).User)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservations.ElementAt(0).AmountReserved)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservations.ElementAt(0).StartDate)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Reservations)
+            {
+            <tr>
+                <th>
+                   @Html.DisplayFor(modelItem => item.User.FirstName) @Html.DisplayFor(modelItem => item.User.LastName)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AmountReserved)
+                </td>
+                <td>
+                    @Html.ValueFor(modelItem => item.StartDate, "{0:dd/MM/yyyy}")
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
